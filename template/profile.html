@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riganstore - Profile</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/fontawesome.css" />
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../static/css/rigan.css" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/themes/w-theme-indigo.css" />
+    <script src="../static/js/jquery-3.6.1.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <!-- script library used for customized alert box -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="../static/js/owl.carousel.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+</head>
+<style>
+    @media  screen and (max-width:680px) {
+    .w-navbar {
+        display: none;
+    }
+    header {
+    position: static !important;
+    }
+
+    }
+    
+
+
+</style>
+<body>
+
+    <!-- loader -->
+    <div class="loader-con">
+        <div class="loader">
+            <img src="../static/image/loader.png" />
+        </div>
+    </div>
+    
+    <!-- bottom Navigation -->
+    <div class="bottom-nav w-card-8">
+        <div class=""><a href="../index.html" class=""><i class="fa fa-home"></i><br><small>Store</small></a></div>
+        <div class="dropdown">
+            <a href="#" class="nav-a dropdown-toggle" data-toggle="dropdown"><i class="fa fa-th"></i><br><small>Categories</small></a>
+            <ul class="dropdown-menu w-card-16">
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Jewelery</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Clothes</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Footwears</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Glasses</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Bags</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Electronics</a></li>
+            </ul>
+        </div>
+        <div class="active dropdown">
+            <a href="#" class="nav-a dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><br>Account</a>
+            <ul class="dropdown-menu w-card-16">
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-sign-in"></i> SIGN IN</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="profile.html"><i class="fa fa-user"></i> My Profile</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-heart-o"></i> Saved Items</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-diamond"></i> Coupons</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-history"></i> Transaction History</a></li>
+            </ul>
+        </div>
+        <div><a href="#" class="nav-a"><i class="fa fa-truck"></i><br>Orders</a></div>
+        <div class="dropdown">
+            <a class="nav-a dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle"></i><br>Help</a>
+            <ul class="dropdown-menu w-card-16">
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-question"></i> Privacy Policy</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-star-o"></i> Reviews</a></li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+    <!-- Header section -->
+    <header class="w-theme-d3 w-sticky-top w-flex w-flex-wrap w-align-center w-padding-8 w-flex-between col-sm-12 col-md-12 col-l-12">
+        <div>
+        <span class="h4 w-bold-xx">Riganstore</span>
+        </div>
+        <div class="cart-area">
+            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+         </div>
+        <ul class="w-navbar">
+            <li><a href="../index.html" class="w-hover-text-theme"><i class="fa fa-home"></i> Store</a></li>
+                <li class="dropdown">
+                    <a href="#" class="w-hover-text-theme dropdown-toggle active" data-toggle="dropdown"><i class="fa fa-user"></i> Account</a>
+                    <ul class="dropdown-menu w-card-16">
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-sign-in"></i> SIGN IN</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="profile.html"><i class="fa fa-user"></i> My Profile</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-truck"></i> My Orders</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-heart-o"></i> Saved Items</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-diamond"></i> Coupons</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-history"></i> Transaction History</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="w-hover-text-theme dropdown-toggle" data-toggle="dropdown"><i class="fa fa-th"></i> Categories</a>
+                    <ul class="dropdown-menu w-card-16">
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Jewelery</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Clothes</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Footwears</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Glasses</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Bags</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Electronics</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="w-hover-text-theme dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle"></i> Help</a>
+                    <ul class="dropdown-menu w-card-16">
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-question"></i> Privacy Policy</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-star-o"></i> Reviews</a></li>
+                    </ul>
+                </li>
+            
+                <li><a href="#" class="w-hover-text-theme"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                
+        </ul>
+
+    </header>
+
+    <div class="dash w-theme-l2 w-padding w-round-large w-padding-8">
+        <div>
+            Wallet Balance <span class="view-balance"><i class="fa fa-eye"></i></span>
+        </div>
+        <div class="balance">
+            N<span id="acc-bal">5,430.00</span>
+            <p>& Bonus N<span id="bon-bal">200.00</span></p>
+        </div>
+        <div class="dash-flex">
+            <div>
+                <a href="#" class="w-text-theme"><i class="fa fa-plus"></i></a>
+                <p>Fund Wallet</p>
+            </div>
+            <div>
+                <a href="#" class="w-text-theme"><i class="fa fa-list-alt"></i></a>
+                <p>Transactions</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- services -->
+    
+
+
+    <script src="../static/js/script.js"></script>
+    <script>
+
+    </script>
+    
+</body>
+</html>

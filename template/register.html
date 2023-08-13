@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RiganVTU - Login</title>
+    <title>RiganVTU - Register</title>
     <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../static/css/fontawesome.css" />
     <link rel="stylesheet" href="../static/css/owl.carousel.min.css" />
@@ -24,12 +24,12 @@
         padding: 20px;
         background: #fff;
         text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         border: none;
         margin: auto;
+        position: absolute;
+        top: calc(50% + 100px);
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
       .content h3 {
           padding-top: 5px;
@@ -39,7 +39,7 @@
         text-align: center;
       }
       
-
+      
       .content .form .field{
         width: 100%;
         height: 50px;
@@ -53,6 +53,62 @@
         margin: 3px;
         font-weight: 500;
         font-size: 13px;
+      }
+      form .indicator{
+        height: 8px;
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        display: none;
+      }
+      form .indicator span{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background: lightgrey;
+        border-radius: 5px;
+      }
+      form .indicator span:nth-child(2){
+        margin: 0 3px;
+      }
+      form .indicator span.active:before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+      }
+      .indicator span.weak:before{
+        background-color: #ff4757;
+      }
+      .indicator span.medium:before{
+        background-color: orange;
+      }
+      .indicator span.strong:before{
+        background-color: #23ad5c;
+      }
+      #signup-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      form .text{
+        font-size: 15px;
+        font-weight: 500;
+        display: none;
+        margin-bottom: -10px;
+        text-align: left;
+      }
+      form .text.weak{
+        color: #ff4757;
+      }
+      form .text.medium{
+        color: orange;
+      }
+      form .text.strong{
+        color: #23ad5c;
       }
       .form .field input{
         width: 100%;
@@ -120,11 +176,11 @@
             </div>
             <ul>
                 <li><a href="../index.html" class="w-hover-theme"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="#pricing" class="w-hover-theme"><i class="fa fa-dollar"></i> Pricing</a></li>
-                <li><a href="#" class="w-hover-theme"><i class="fa fa-phone"></i> Contact</a></li>
+                <li><a href="../index.html#pricing" class="w-hover-theme"><i class="fa fa-dollar"></i> Pricing</a></li>
+                <li><a href="#" class="w-hover-theme" data-toggle="modal" data-target="#contactModal"><i class="fa fa-phone"></i> Contact</a></li>
                 <li><a href="#" class="w-hover-theme"><i class="fa fa-question"></i> FAQ</a></li>
-                <li><a href="login.html" class="w-hover-theme active"><i class="fa fa-lock"></i> Login</a></li>
-                <li><a href="register.html" class="w-hover-theme"><i class="fa fa-user-plus"></i> SignUp</a></li>
+                <li><a href="login.html" class="w-hover-theme"><i class="fa fa-lock"></i> Login</a></li>
+                <li><a href="register.html" class="w-hover-theme active"><i class="fa fa-user-plus"></i> SignUp</a></li>
             </ul>
         </nav>
     </div>
@@ -139,7 +195,7 @@
         <ul class="w-navbar">
             <li><a href="../index.html" class="w-hover-text-theme"><i class="fa fa-home"></i> Home</a></li>
             <li><a href="../index.html#pricing" class="w-hover-text-theme"><i class="fa fa-dollar"></i> Pricing</a></li>
-            <li><a href="#" class="w-hover-text-theme"><i class="fa fa-phone"></i> Contact</a></li>
+            <li><a href="#" class="w-hover-text-theme" data-toggle="modal" data-target="#contactModal"><i class="fa fa-phone"></i> Contact</a></li>
             <li><a href="#" class="w-hover-text-theme"><i class="fa fa-question"></i> FAQ</a></li>
             <!--
             <li class="w-dropdown-hover">
@@ -149,39 +205,54 @@
                 </div>
             </li>
         -->
-            <li><a href="login.html" class="w-hover-text-theme active"><i class="fa fa-lock"></i> Login</a></li>
-            <li><a href="register.html" class="w-hover-text-theme"><i class="fa fa-user-plus"></i> SignUp</a></li>
+            <li><a href="login.html" class="w-hover-text-theme"><i class="fa fa-lock"></i> Login</a></li>
+            <li><a href="register.html" class="w-hover-text-theme active"><i class="fa fa-user-plus"></i> SignUp</a></li>
         </ul>
 
     </header>
 
     <!-- Modal body -->
     <form class="content w-card-16" action="#">
-        <h3>Login Form</h3>
+        <h3>SignUp Form</h3>
         <div class="form">
+            <div class="field">
+                <input type="email" class="form-control" id="email" placeholder="Email Address" name="email" required>
+                <div class="icons"></div>
+            </div>
+            <p class="error email-error" id=""></p>
+            <div class="field">
+                <input type="tel" class="form-control" id="phone" placeholder="Phone Number" name="phone" required>
+                <div class="icons"></div>
+            </div>
+            <p class="error tel-error" id=""></p>
             <div class="field">
                 <input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
                 <div class="icons"></div>
             </div>
             <p class="error user-error" id=""></p>
+
             <div class="field">
-                <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+                <input type="password" oninput="trigger()" class="form-control" id="new_password" placeholder="Password" name="password" required>
                 <div class="icons"></div>
             </div>
-            <p class="error pass-error" id=""></p>
-            <button class="w-theme-action" type="submit">Login</button>
-            <p class="sign-txt">Not A Registered User? <a href="register.html">Create Account</a></p>
+            <div class="indicator">
+                <span class="weak"></span>
+                <span class="medium"></span>
+                <span class="strong"></span>
+            </div>
+            <p class="text" id=""></p>
+
+            <div class="field">
+                <input type="password" class="form-control" id="cpassword" placeholder="Confirm Password" name="password" required>
+                <div class="icons"></div>
+            </div>
+            <p class="error cpass-error" id=""></p>
+
+            <button class="w-theme-action" type="submit" id="signup-btn">Create Account</button>
+            <p class="sign-txt">Already have an account? <a href="login.html">Login</a></p>
         </div>
     </form>
     <script src="../static/js/validation.js"></script>
     <script src="../static/js/script.js"></script>
-    <script>
-        $('.content').submit(function(e) {
-            e.preventDefault();
-            if($('#username').val() != '' && $('#password').val() != '') {
-                location.href = "dashboard.html";
-            }
-        })
-    </script>
 </body>
 </html>
