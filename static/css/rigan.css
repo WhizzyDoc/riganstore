@@ -1136,8 +1136,8 @@ input[type=checkbox].w-check:disabled+.w-validate, input[type=radio].w-radio:dis
 .w-margin-0 {margin:0!important}
 .w-margin-top {margin-top:16px!important}
 .w-margin-bottom {margin-bottom:16px!important}
-.w-margin-left {margin-left:16px!important}
-.w-margin-right {margin-right:16px!important}
+.w-margin-left {margin-left:8px!important}
+.w-margin-right {margin-right:8px!important}
 .w-section {
     margin-top:16px!important;
     margin-bottom:16px!important;
