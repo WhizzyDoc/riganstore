@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riganstore - Electronics</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/fontawesome.css" />
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../static/css/rigan.css" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/themes/w-theme-green.css" />
+    <script src="../static/js/jquery-3.6.1.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <!-- script library used for customized alert box -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="../static/js/owl.carousel.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+</head>
+<style>
+    @media  screen and (max-width:680px) {
+    .w-navbar {
+        display: none;
+    }
+    header {
+    position: static !important;
+    }
+
+    }
+    .owl-dots{
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.owl-dot{
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 50%;
+  border: 2px solid #fff!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #fff!important;
+}
+    
+
+
+</style>
+<body class="w-theme-l5">
+
+    <!-- loader -->
+    <div class="loader-con">
+        <div class="loader">
+            <img src="../static/image/loader.png" />
+        </div>
+    </div>
+    
+    <!-- bottom Navigation -->
+    <div class="bottom-nav w-card-12">
+        <div class=""><a href="../index.html" class=""><i class="fa fa-home"></i><br><small>Store</small></a></div>
+        <div class="dropdown active">
+            <a href="#" class="nav-a dropdown-toggle" data-toggle="dropdown"><i class="fa fa-briefcase"></i><br>Items</a>
+            <ul class="dropdown-menu w-card-16">
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Jewelery</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Clothes</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Footwears</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Glasses</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Bags</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="category.html">Electronics</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="nav-a dropdown-toggle" data-toggle="dropdown"><i class="fa fa-smile-o"></i><br>Me</a>
+            <ul class="dropdown-menu w-card-16">
+                <li><a class="dropdown-item w-hover-theme w-padding" href="login.html"><i class="fa fa-sign-in"></i> SIGN IN</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="profile.html"><i class="fa fa-user"></i> My Profile</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-heart-o"></i> Saved Items</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-diamond"></i> Coupons</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-history"></i> Transaction History</a></li>
+            </ul>
+        </div>
+        <div><a href="#" class="nav-a"><i class="fa fa-truck"></i><br>Orders</a></div>
+        <div class="dropdown">
+            <a class="nav-a dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle"></i><br>Help</a>
+            <ul class="dropdown-menu w-card-16">
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-question"></i> Privacy Policy</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-star-o"></i> Reviews</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-comment-o"></i> Message Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+    <!-- Header section -->
+    <header class="w-theme-d3 w-sticky-top w-flex w-flex-wrap w-align-center w-padding-8 w-flex-between col-sm-12 col-md-12 col-l-12">
+        <div>
+            <img class="store_logo w-padding-bottom" src="../static/image/loader.png" alt="" />
+        <span class="h4 w-bold-xx" style="font-family:verdana">Rigan Store</span>
+        </div>
+        <div class="w-white cart-area w-card-8">
+            <div class="cart-no">0</div>
+            <a href="../template/cart.html" class="w-text-theme"><i class="fa fa-shopping-cart"></i></a>
+            
+         </div>
+        <ul class="w-navbar">
+            <li><a href="../index.html" class="w-hover-text-theme"><i class="fa fa-home"></i> Store</a></li>
+                <li class="dropdown">
+                    <a href="#" class="w-hover-text-theme dropdown-toggle" data-toggle="dropdown"><i class="fa fa-smile-o"></i> Me</a>
+                    <ul class="dropdown-menu w-card-16">
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="login.html"><i class="fa fa-sign-in"></i> SIGN IN</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="profile.html"><i class="fa fa-user"></i> My Profile</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-truck"></i> My Orders</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-heart-o"></i> Saved Items</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-diamond"></i> Coupons</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-history"></i> Transaction History</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="w-hover-text-theme dropdown-toggle active" data-toggle="dropdown"><i class="fa fa-th"></i> Categories</a>
+                    <ul class="dropdown-menu w-card-16">
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Jewelery</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Clothes</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Footwears</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Glasses</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Bags</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="category.html">Electronics</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="w-hover-text-theme dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle"></i> Help</a>
+                    <ul class="dropdown-menu w-card-16">
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-question"></i> Privacy Policy</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-star-o"></i> Reviews</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-comment-o"></i> Message Us</a></li>
+                    </ul>
+                </li>
+            
+                <li><a href="../template/cart.html" class="w-hover-text-theme"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                
+        </ul>
+
+    </header>
+
+    <!-- search area -->
+    <form action="#" method="GET" id="search-form" class="w-flex w-flex-around w-align-center w-padding">
+        <input type="text" class="form-control" id="search-input" placeholder="search product, category, brand" />
+        <button type="submit" class="btn btn-success" style="margin-left:5px;"><i class="fa fa-search"></i></button>
+        <ul class="w-white w-card-16 search-result">
+            <li><a href="#" class="w-text-black w-bold w-hover-theme">Product 1</a></li>
+            <li><a href="#" class="w-text-black w-bold w-hover-theme">Product 2</a></li>
+            <li><a href="#" class="w-text-black w-bold w-hover-theme">Product 3</a></li>
+        </ul>
+    </form>
+
+    <!-- new product -->
+    <section id="features">
+        <h1 class="w-text-theme">ELECTRONICS</h1>
+        <div class="new-pro w-theme-l5 cat-tab">
+            <div class="new-con">
+
+                        <button class="btn btn-success w-white w-hover-theme w-margin-right cat-btn active" data-id="">All</button>
+                        <button class="btn btn-success w-white w-hover-theme w-margin-right cat-btn" data-id="">Airpods</button>
+                        <button class="cat-btn btn btn-success w-white w-hover-theme w-margin-right" data-id="">Power Banks</button>
+                        <button class="cat-btn btn btn-success w-white w-hover-theme w-margin-right" data-id="">Phones</button>
+                        <button class="cat-btn btn btn-success w-white w-hover-theme w-margin-right" data-id="">Bluetooth</button>
+                        <button class="cat-btn btn btn-success w-white w-hover-theme w-margin-right" data-id="">Headphones</button>
+                        
+                </div>
+   
+        </div>
+
+    </section>
+    
+    <!-- promo product -->
+    <section id="features" style="padding-bottom:50px;">
+        <div class="new-pro w-white">
+            <div class="new-con b w-flex-wrap">
+
+                <div class="prod-con flash">
+                    <div class="prod-img">
+                        <a href="product.html"><img src="../static/image/airpods.png" alt="" /></a>
+                        <div class="new-tag">-15%</div>
+                    </div>
+                    <p>Oraimo Airpod</p>
+                    <h3><strike class="w-text-gray">N5,000</strike>&nbsp;N4,200</h3>
+                    <form action="#" class="add-cart-form" method="POST">
+                        <button type="submit" class="btn add-cart-btn">Add Cart <i class="fa fa-shopping-cart"></i></button>
+                        <input type="hidden" value="" />
+                    </form>
+                </div>
+                
+                <div class="prod-con flash">
+                    <div class="prod-img">
+                        <a href="#"><img src="../static/image/airpods.png" alt="" /></a>
+                        <div class="new-tag">-15%</div>
+                    </div>
+                    <p>Oraimo Airpod</p>
+                    <h3><strike class="w-text-gray">N5,000</strike>&nbsp;N4,200</h3>
+                    <form action="#" class="add-cart-form" method="POST">
+                        <button type="submit" class="btn add-cart-btn">Add Cart <i class="fa fa-shopping-cart"></i></button>
+                        <input type="hidden" value="" />
+                    </form>
+                </div>
+                
+                <div class="prod-con flash">
+                    <div class="prod-img">
+                        <a href="#"><img src="../static/image/airpods.png" alt="" /></a>
+                        <div class="new-tag">-15%</div>
+                    </div>
+                    <p>Oraimo Airpod</p>
+                    <h3><strike class="w-text-gray">N5,000</strike>&nbsp;N4,200</h3>
+                    <form action="#" class="add-cart-form" method="POST">
+                        <button type="submit" class="btn add-cart-btn">Add Cart <i class="fa fa-shopping-cart"></i></button>
+                        <input type="hidden" value="" />
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="../static/js/script.js"></script>
+    <script>
+        
+    </script>
+    
+</body>
+</html>

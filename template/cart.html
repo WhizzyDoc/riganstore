@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riganstore - Cart</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/fontawesome.css" />
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../static/css/rigan.css" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/themes/w-theme-green.css" />
+    <script src="../static/js/jquery-3.6.1.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <!-- script library used for customized alert box -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="../static/js/owl.carousel.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+</head>
+<style>
+    @media  screen and (max-width:680px) {
+    .w-navbar {
+        display: none;
+    }
+    header {
+    position: static !important;
+    }
+
+    }
+    .owl-dots{
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.owl-dot{
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 50%;
+  border: 2px solid #fff!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #fff!important;
+}
+    
+
+
+</style>
+<body class="w-theme-l5">
+
+    <!-- loader -->
+    <div class="loader-con">
+        <div class="loader">
+            <img src="../static/image/loader.png" />
+        </div>
+    </div>
+    
+    <!-- bottom Navigation -->
+    <div class="bottom-nav w-card-12">
+        <div class=""><a href="../index.html" class=""><i class="fa fa-home"></i><br><small>Store</small></a></div>
+        <div class="dropdown">
+            <a href="#" class="nav-a dropdown-toggle" data-toggle="dropdown"><i class="fa fa-briefcase"></i><br>Items</a>
+            <ul class="dropdown-menu w-card-16">
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Jewelery</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Clothes</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Footwears</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Glasses</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#">Bags</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="category.html">Electronics</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="nav-a dropdown-toggle" data-toggle="dropdown"><i class="fa fa-smile-o"></i><br>Me</a>
+            <ul class="dropdown-menu w-card-16">
+                <li><a class="dropdown-item w-hover-theme w-padding" href="login.html"><i class="fa fa-sign-in"></i> SIGN IN</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="profile.html"><i class="fa fa-user"></i> My Profile</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-heart-o"></i> Saved Items</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-diamond"></i> Coupons</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-history"></i> Transaction History</a></li>
+            </ul>
+        </div>
+        <div><a href="#" class="nav-a"><i class="fa fa-truck"></i><br>Orders</a></div>
+        <div class="dropdown">
+            <a class="nav-a dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle"></i><br>Help</a>
+            <ul class="dropdown-menu w-card-16">
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-question"></i> Privacy Policy</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-star-o"></i> Reviews</a></li>
+                <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-comment-o"></i> Message Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+    <!-- Header section -->
+    <header class="w-theme-d3 w-sticky-top w-flex w-flex-wrap w-align-center w-padding-8 w-flex-between col-sm-12 col-md-12 col-l-12">
+        <div>
+            <img class="store_logo w-padding-bottom" src="../static/image/loader.png" alt="" />
+        <span class="h4 w-bold-xx" style="font-family:verdana">Rigan Store</span>
+        </div>
+        <div class="w-white cart-area w-card-8">
+            <div class="cart-no">0</div>
+            <a href="../template/cart.html" class="w-text-theme active"><i class="fa fa-shopping-cart"></i></a>
+            
+         </div>
+        <ul class="w-navbar">
+            <li><a href="../index.html" class="w-hover-text-theme"><i class="fa fa-home"></i> Store</a></li>
+                <li class="dropdown">
+                    <a href="#" class="w-hover-text-theme dropdown-toggle" data-toggle="dropdown"><i class="fa fa-smile-o"></i> Me</a>
+                    <ul class="dropdown-menu w-card-16">
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="login.html"><i class="fa fa-sign-in"></i> SIGN IN</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="profile.html"><i class="fa fa-user"></i> My Profile</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-truck"></i> My Orders</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-heart-o"></i> Saved Items</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-diamond"></i> Coupons</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-history"></i> Transaction History</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="w-hover-text-theme dropdown-toggle" data-toggle="dropdown"><i class="fa fa-th"></i> Categories</a>
+                    <ul class="dropdown-menu w-card-16">
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Jewelery</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Clothes</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Footwears</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Glasses</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#">Bags</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="category.html">Electronics</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="w-hover-text-theme dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle"></i> Help</a>
+                    <ul class="dropdown-menu w-card-16">
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-question"></i> Privacy Policy</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-star-o"></i> Reviews</a></li>
+                        <li><a class="dropdown-item w-hover-theme w-padding" href="#"><i class="fa fa-comment-o"></i> Message Us</a></li>
+                    </ul>
+                </li>
+            
+                <li class=""><a href="../template/cart.html" class="w-hover-text-theme active"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                
+        </ul>
+
+    </header>
+
+    <!-- new product -->
+    <!-- promo product -->
+    <section id="features" style="padding-bottom:50px;">
+        <h1>MY CART</h1>
+        <div class="new-pro w-white">
+            <div class="new-con b w-flex-wrap w-flex-between w-align-start" style="align-items:flex-start">
+
+                <div class="prod-con flash" style="width:100%;max-width:400px;">
+
+                    <div class="cart-box w-margin-bottom">
+                        <img src="../static/image/airpods.png" alt="" />
+                        <div>
+                            <h3 class="margin-bottom padding-bottom">Oraimo Airpods</h3>
+                            <p>Price: N4,200</p>
+                            <div class="w-flex w-flex-center w-align-center">
+                                <button class="btn btn-success cart-plus"><i class="fa fa-plus"></i></button>
+                                <form action="#" class="quantity-form" method="POST">
+                                    <input type="number" class="w-center cart_qty" readonly value="1" min="1" />
+                                    <input type="hidden" value="" />
+                                </form>
+                                <button class="btn btn-warning cart-minus"><i class="fa fa-minus"></i></button>
+                            </div>
+                            <button class="btn btn-danger btn-block cart-remove"><i class="fa fa-times"></i> Remove Item</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-box w-margin-bottom">
+                        <img src="../static/image/airpods.png" alt="" />
+                        <div>
+                            <h3 class="margin-bottom padding-bottom">New Age Airpods</h3>
+                            <p>Price: N3,500</p>
+                            <div class="w-flex w-flex-center w-align-center">
+                                <button class="btn btn-success cart-plus"><i class="fa fa-plus"></i></button>
+                                <form action="#" class="quantity-form" method="POST">
+                                    <input type="number" class="w-center cart_qty" readonly value="1" min="1" />
+                                    <input type="hidden" value="" />
+                                </form>
+                                <button class="btn btn-warning cart-minus"><i class="fa fa-minus"></i></button>
+                            </div>
+                            <button class="btn btn-danger btn-block cart-remove"><i class="fa fa-times"></i> Remove Item</button>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+
+                <div class="prod-con flash w-card-4" style="width:100%;max-width:400px;">
+                    <h3 style="line-height:normal">Do you have any coupon you might like to use?</h3>
+                    <button class="btn btn-info">See available coupons</button>
+                    <form action="#" method="POST" class="w-margin-top w-margin-bottom">
+                        <input type="text" class="form-control w-margin-bottom" placeholder="Enter coupon code" />
+                        <button type="submit" class="btn btn-success">Use Coupon</button>
+                    </form>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Quantity</th>
+                                    <th>price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Oraimo Airpods</td>
+                                    <td>1</td>
+                                    <td>N4,200</td>
+                                </tr>
+                                <tr>
+                                    <td>New Age Airpods</td>
+                                    <td>1</td>
+                                    <td>N3,500</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Coupon</td>
+                                    <td>-N200</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Total Price</td>
+                                    <td>N7,500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <a href="#"><button class="btn btn-success btn-block">Checkout <i class="fa fa-share"></i></button></a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../static/js/script.js"></script>
+    <script>
+        
+    </script>
+    
+</body>
+</html>
