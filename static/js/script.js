@@ -100,32 +100,35 @@ $(document).ready(function() {
       .fadeOut(500);
     })
 
-    // frontpage slider
-    var indexValue = 1;
-      showImg(indexValue);
-      function btm_slide(e){showImg(indexValue = e);}
-      function side_slide(e){showImg(indexValue += e);}
-      function showImg(e){
-        var i;
-        const img = document.querySelectorAll('.front');
-        const slider = document.querySelectorAll('.btm-slides span');
-        if(e > img.length){indexValue = 1}
-        if(e < 1){indexValue = img.length}
-        for(i = 0; i < img.length; i++){
-          img[i].style.display = "none";
-        }
-        for(i = 0; i < slider.length; i++){
-          slider[i].style.background = "rgba(255,255,255,0.1)";
-        }
-        img[indexValue-1].style.display = "block";
-        slider[indexValue-1].style.background = "white";
+    /* add to cart effect */
+    let count = 0;
+    $('.add-cart-btn').on('click', function(e) {
+      e.preventDefault();
+      $('.note-header').html(`<i class="fa fa-shopping-cart"></i> Cart`);
+      
+      if($(this).hasClass('btn-danger')) {
+        count--;
+      $('.cart-no').text(count);
+      $('.note-body').text('A new item has been removed from cart!')
+      $('.notification').addClass('active');
+        setTimeout(function() {
+          $('.notification').removeClass('active')
+        }, 5000);
+      $(this).html(`Add Cart <i class="fa fa-shopping-cart"></i>`).removeClass('btn-danger');
       }
 
-      var n = 1;
-      function loop(n) {
-        setInterval(side_slide, 4000, n);
+      else {
+        count++;
+        $('.cart-no').text(count);
+        $('.note-body').text('A new item has been added to cart!')
+        $('.notification').addClass('active');
+        setTimeout(function() {
+          $('.notification').removeClass('active')
+        }, 5000);
+        $(this).html(`Remove <i class="fa fa-times"></i>`).addClass('btn-danger');
       }
-      loop(n); 
+      
+    })
 })
 
 function cart_qty(elem, plus) {

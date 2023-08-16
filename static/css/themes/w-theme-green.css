@@ -14,9 +14,9 @@
 .w-theme-action {color:#fff !important; background-color:#265728 !important}
 
 .w-theme {color:#fff !important; background-color:#4caf50 !important}
-.w-text-theme {color:#4caf50 !important}
+.w-text-theme {color:#265728 !important}
 .w-border-theme {border-color:#4caf50 !important}
 
 .w-hover-theme:hover {color:#fff !important; background-color:#4caf50 !important}
-.w-hover-text-theme:hover {color:#4caf50 !important}
+.w-hover-text-theme:hover {color:#4caf50 !important; background: #fff !important}
 .w-hover-border-theme:hover {border-color:#4caf50 !important}

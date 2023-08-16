@@ -8,6 +8,27 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+.notification {
+  position: fixed;
+  top: -100px;
+  width: 95%;
+  left: 2.5%;
+  z-index: 1000;
+  border-radius: 8px;
+  padding: 5px 8px;
+  transition: all .5s ease-in-out;
+}
+.notification.active {
+  top: 5px;
+  transition: all .5s ease-in-out;
+}
+.note-header {
+
+}
+.note-body {
+  font-size: 12px;
+  padding: 5px;
+}
 #search-form {
    position: relative;
 }
@@ -43,6 +64,18 @@ header {
 header .store_logo {
   width: 30px;
   height: 30px;
+}
+.title {
+  background: linear-gradient(135deg, yellow 0%, rgb(161, 231, 31) 25%, rgb(144, 228, 9) 50%, rgb(150, 248, 150) 75%, yellow 100%);
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 700;
+  -webkit-text-fill-color: transparent;
+  animation: animate 10s linear infinite;
+}
+@keyframes animate {
+  to{background-position: 400%;}
 }
 /* loader */
 .loader-con {
@@ -413,20 +446,20 @@ nav ul li a {
   background-image: linear-gradient(-90deg, rgb(97, 228, 57), rgb(7, 121, 3)) !important;
 
 }
-.slider-con {
+.slider-con, .profile-con {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.slider-con img {
+.slider-con img, .profile-con img {
   max-height: 100px !important;
   width: auto;
 }
 @media screen and (min-width:681px) {
   .dash {
-    min-height: 20px;
+    min-height: 200px;
   }
-  .slider-con img {
+  .slider-con img, .profile-con img {
     max-height: 250px !important;
     width: auto;
   }
@@ -501,4 +534,41 @@ nav ul li a {
 .payment-con {
   width: 100%;
   max-width: 300px;
+}
+
+/* Profile page */
+.profile {
+  width: 95%;
+  margin: 60px auto 5px auto;
+  background-image: linear-gradient(-90deg, rgb(97, 228, 57), rgb(7, 121, 3)) !important;
+  height: 150px;
+  overflow: hidden;
+  transition: .5s all ease-in;
+}
+.profile.stretch {
+  height: 440px;
+  transition: .3s all ease-in-out;
+}
+.profile-con h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.profile-con p {
+  font-size: 12px;
+  line-height: normal;
+}
+.profile-con .dp {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: auto;
+}
+.view-btn {
+  padding: 5px 15px;
+  font-size: 12px;
+  margin: auto;
+}
+.view-btn:hover {
+  background-image: linear-gradient(-90deg, rgb(97, 228, 57), rgb(7, 121, 3)) !important;
+  color: #fff !important;
 }
